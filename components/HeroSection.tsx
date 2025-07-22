@@ -37,7 +37,7 @@ const HeroSection = () => {
               className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/30"
             >
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
-              <span className="text-sm font-medium text-gray-800">Revolutionary English Learning App</span>
+
             </motion.div>
 
             <motion.h1
