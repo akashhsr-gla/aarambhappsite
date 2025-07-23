@@ -86,7 +86,7 @@ const AboutFounderSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-blue-500/20 rounded-3xl transform rotate-3"></div>
               <div className="relative bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
                 <Image
-                  src="/IMG_20250707_163035.jpg"
+                  src="/dounders image.jpg"
                   alt="Omprakash Prajapati - Founder of Aarambh"
                   width={500}
                   height={600}
@@ -114,7 +114,7 @@ const AboutFounderSection = () => {
           >
             <div>
               <h3 className="text-3xl md:text-4xl font-bold mb-8">
-                From Small Town Dreams to <span className="text-gradient">Big Changes</span>
+                From the Rural Landscape to <span className="text-gradient">Big Changes</span>
               </h3>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
@@ -124,7 +124,7 @@ const AboutFounderSection = () => {
                 </p>
                 <p>
                   He worked really hard and cracked the <strong className="text-red-500">JEE Mains</strong>, landing a seat in chemical 
-                  engineering at <strong className="text-blue-500">Punjab University</strong>. Even then, the whole English-speaking thing 
+                  engineering at <strong className="text-blue-500">Panjab University</strong>. Even then, the whole English-speaking thing 
                   was tough. But those tough days made him realize how many others must be feeling the same.
                 </p>
                 <p>
