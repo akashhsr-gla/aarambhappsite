@@ -9,7 +9,7 @@ const AboutFounderSection = () => {
     {
       icon: GraduationCap,
       title: "Chemical Engineering",
-      description: "Qualified JEE Mains, Punjab University",
+      description: "Qualified JEE Mains, Panjab University",
       color: "from-red-500 to-red-600"
     },
     {
