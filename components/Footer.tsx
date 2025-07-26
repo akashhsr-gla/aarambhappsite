@@ -35,11 +35,11 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/1AxS8Unuh8/', label: 'Facebook' },
     { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/p/DMH0inzA467/?igsh=eGhnZ2Rwc2d1cHl2', label: 'Instagram' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    { icon: Youtube, href: 'https://youtube.com/@aarambh.comofficial?si=qkvynUzabaaKrU-W', label: 'YouTube' },
   ]
 
   return (
