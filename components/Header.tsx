@@ -22,7 +22,21 @@ const Header = () => {
     { name: 'Features', href: '#features' },
     { name: 'About', href: '#about' },
     { name: 'Download', href: '#download' },
+    { name: 'Download APK', href: '/app.apk', download: true },
   ]
+
+  const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>, item: typeof navItems[0]) => {
+    if (item.download) {
+      e.preventDefault()
+      // Placeholder for APK download - will be updated when APK file is provided
+      const link = document.createElement('a')
+      link.href = item.href
+      link.download = 'aarambh-app.apk'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
+  }
 
   return (
     <motion.header
@@ -59,6 +73,7 @@ const Header = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleDownload(e, item)}
                 whileHover={{ y: -2 }}
                 className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium text-lg"
               >
@@ -101,7 +116,10 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    handleDownload(e, item)
+                    setIsMenuOpen(false)
+                  }}
                   className="block text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium py-3 text-lg"
                 >
                   {item.name}
