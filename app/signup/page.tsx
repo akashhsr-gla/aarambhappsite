@@ -34,11 +34,17 @@ export default function SignupPage() {
   const loadRegions = async () => {
     try {
       const response = await regionsAPI.getAllRegions()
-      if (response.success) {
-        setRegions(response.data || [])
+      if (response.success && response.data?.regions) {
+        // Filter to show only active regions
+        const activeRegions = response.data.regions.filter((region: any) => region.isActive !== false)
+        setRegions(activeRegions)
+      } else {
+        console.error('Regions response structure unexpected:', response)
+        setRegions([])
       }
     } catch (err) {
       console.error('Error loading regions:', err)
+      setRegions([])
     } finally {
       setLoadingRegions(false)
     }
