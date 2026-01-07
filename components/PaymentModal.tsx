@@ -11,6 +11,7 @@ interface Plan {
   description: string
   price: number
   duration: number
+  durationType?: string
   features: (string | { name: string; description: string })[]
 }
 
