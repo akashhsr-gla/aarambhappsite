@@ -212,7 +212,7 @@ export default function PaymentModal({
                   <div className="flex items-baseline gap-2">
                     <span className="text-2xl font-bold text-red-600">₹{plan.price}</span>
                     <span className="text-gray-600 text-sm">
-                      for {plan.duration} {plan.durationType || 'days'}
+                      for {plan.duration} {plan.durationType || 'months'}
                     </span>
                   </div>
                 </div>
