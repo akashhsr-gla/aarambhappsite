@@ -9,8 +9,11 @@ A beautiful, professional Next.js website for the Aarambh app - a revolutionary 
 - **Beautiful Animations** - Smooth animations using Framer Motion
 - **Modern UI/UX** - Professional design with the app's color scheme
 - **SEO Optimized** - Meta tags and structured content
-- **Dark Mode Ready** - Built with dark mode support
-- **Accessible** - WCAG compliant design
+- **Student Authentication** - Login and signup for students only
+- **Subscription Management** - View subscription status and expiry date
+- **Payment Integration** - Razorpay integration for subscription payments
+- **Teacher Referral Codes** - Support for teacher referral discount codes
+- **Dashboard** - Student dashboard showing subscription information
 
 ## 🎨 Design Features
 
@@ -48,7 +51,7 @@ A beautiful, professional Next.js website for the Aarambh app - a revolutionary 
 
 1. Navigate to the website directory:
 ```bash
-cd AarambhApp/website
+cd aarambhappsite
 ```
 
 2. Install dependencies:
@@ -56,12 +59,18 @@ cd AarambhApp/website
 npm install
 ```
 
-3. Run the development server:
+3. Create a `.env.local` file in the root directory with the following variables:
+```env
+NEXT_PUBLIC_API_BASE_URL=https://aarambh-english-learning-app-1.onrender.com/api
+NEXT_PUBLIC_RAZORPAY_KEY_ID=rzp_test_your_key_here
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Build for Production
 
@@ -73,19 +82,28 @@ npm start
 ## 📁 Project Structure
 
 ```
-website/
+aarambhappsite/
 ├── app/
-│   ├── globals.css          # Global styles
-│   ├── layout.tsx           # Root layout
-│   └── page.tsx             # Home page
+│   ├── dashboard/          # Student dashboard page
+│   ├── login/              # Login page
+│   ├── signup/             # Signup page
+│   ├── subscription/       # Subscription plans page
+│   ├── globals.css         # Global styles
+│   ├── layout.tsx          # Root layout with AuthProvider
+│   └── page.tsx            # Home page
 ├── components/
-│   ├── Header.tsx           # Navigation header
-│   ├── HeroSection.tsx      # Hero section
-│   ├── FeaturesSection.tsx  # Features showcase
+│   ├── Header.tsx          # Navigation header with auth
+│   ├── PaymentModal.tsx    # Razorpay payment modal
+│   ├── HeroSection.tsx     # Hero section
+│   ├── FeaturesSection.tsx # Features showcase
 │   ├── AboutFounderSection.tsx # Founder story
-│   └── Footer.tsx           # Footer component
+│   └── Footer.tsx         # Footer component
+├── contexts/
+│   └── AuthContext.tsx     # Authentication context
+├── lib/
+│   └── api.ts              # API service functions
 ├── public/
-│   └── IMG_20250707_163035.jpg # Founder image
+│   └── ...                 # Static assets
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -93,6 +111,25 @@ website/
 ```
 
 ## 🎯 Key Features
+
+### Authentication
+- **Student Login** - Secure login for students only
+- **Student Signup** - Registration with region selection and optional teacher referral code
+- **Protected Routes** - Dashboard and subscription pages require authentication
+- **Session Management** - JWT token-based authentication
+
+### Dashboard
+- **Subscription Status** - View current subscription status (Active/Inactive)
+- **Expiry Date** - See when subscription expires
+- **Days Remaining** - Countdown to subscription expiry
+- **Quick Actions** - Links to manage subscription and navigate
+
+### Subscription Management
+- **View Plans** - Browse all available subscription plans
+- **Plan Details** - See features, pricing, and duration for each plan
+- **Razorpay Integration** - Secure payment processing
+- **Teacher Referral Codes** - Apply referral codes for discounts
+- **Payment Modal** - Beautiful modal for checkout with discount calculation
 
 ### Hero Section
 - Animated background elements
