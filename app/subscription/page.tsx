@@ -134,7 +134,7 @@ export default function SubscriptionPage() {
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-red-600">₹{plan.price}</span>
                     <span className="text-gray-600 ml-2">
-                      / {plan.duration} {plan.durationType || 'months'}
+                       {plan.duration} {plan.durationType || 'months'}
                     </span>
                   </div>
                 </div>
