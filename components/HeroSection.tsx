@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center gradient-bg-hero relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center gradient-bg-hero relative overflow-x-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
