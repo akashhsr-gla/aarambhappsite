@@ -166,7 +166,7 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden bg-white border-t border-gray-200 shadow-lg fixed top-16 md:top-20 left-0 right-0 z-40"
           >
-            <div className="px-4 py-6 space-y-3 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="container-max px-4 sm:px-6 lg:px-8 py-6 space-y-3 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {navItems.map((item) => (
                 <a
                   key={item.name}
