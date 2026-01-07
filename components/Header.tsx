@@ -56,18 +56,18 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-xl border-b border-gray-200' 
-          : 'bg-transparent'
+          : 'bg-white/95 backdrop-blur-md md:bg-transparent'
       }`}
     >
-      <div className="container-max">
-        <div className="flex justify-between items-center h-20">
+      <div className="container-max px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link href="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-3 cursor-pointer"
+              className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
             >
-              <div className="relative w-12 h-12">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12">
                 <Image
                   src="/R.png"
                   alt="Aarambh Logo"
@@ -76,7 +76,7 @@ const Header = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-2xl font-bold text-gradient">Aarambh</span>
+              <span className="text-lg sm:text-xl md:text-2xl font-bold text-gradient">Aarambh</span>
             </motion.div>
           </Link>
 
@@ -136,7 +136,8 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors z-50"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} className="text-gray-700" /> : <Menu size={24} className="text-gray-700" />}
           </button>
@@ -150,9 +151,9 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200 shadow-lg"
+            className="md:hidden bg-white border-t border-gray-200 shadow-lg fixed top-16 md:top-20 left-0 right-0 z-40"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 py-6 space-y-3 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -161,7 +162,7 @@ const Header = () => {
                     handleDownload(e, item)
                     setIsMenuOpen(false)
                   }}
-                  className="block text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium py-3 text-lg"
+                  className="block text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium py-2.5 text-base"
                 >
                   {item.name}
                 </a>
@@ -171,15 +172,15 @@ const Header = () => {
                   <Link
                     href="/dashboard"
                     onClick={() => setIsMenuOpen(false)}
-                    className="block text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium py-3 text-lg"
+                    className="block text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium py-2.5 text-base"
                   >
                     Dashboard
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className="w-full btn-primary flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 mt-2"
                   >
-                    <LogOut size={20} />
+                    <LogOut size={18} />
                     <span>Logout</span>
                   </button>
                 </>
@@ -187,9 +188,9 @@ const Header = () => {
                 <Link
                   href="/login"
                   onClick={() => setIsMenuOpen(false)}
-                  className="w-full btn-primary flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2"
                 >
-                  <User size={20} />
+                  <User size={18} />
                   <span>Login</span>
                 </Link>
               )}
