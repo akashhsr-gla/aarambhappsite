@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { authAPI, regionsAPI } from '@/lib/api'
 import { motion } from 'framer-motion'
-import { Mail, Lock, Eye, EyeOff, User, Phone, AlertCircle, CheckCircle } from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff, User, Phone, AlertCircle, CheckCircle, Gift } from 'lucide-react'
 import Link from 'next/link'
 
 export default function SignupPage() {
@@ -247,14 +247,18 @@ export default function SignupPage() {
             <label htmlFor="referralCode" className="block text-sm font-medium text-gray-700 mb-2">
               Teacher Referral Code (Optional)
             </label>
-            <input
-              id="referralCode"
-              type="text"
-              value={formData.referralCode}
-              onChange={(e) => setFormData({ ...formData, referralCode: e.target.value.toUpperCase() })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-              placeholder="Enter teacher referral code"
-            />
+            <div className="relative">
+              <Gift className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <input
+                id="referralCode"
+                type="text"
+                value={formData.referralCode}
+                onChange={(e) => setFormData({ ...formData, referralCode: e.target.value.toUpperCase() })}
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
+                placeholder="Enter teacher referral code"
+              />
+            </div>
+            <p className="mt-1 text-xs text-gray-500">Get a discount when you subscribe with a teacher's referral code</p>
           </div>
 
           <button
