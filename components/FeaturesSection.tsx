@@ -3,11 +3,8 @@
 import { motion } from 'framer-motion'
 import { MessageCircle, Phone, Users, BookOpen, Trophy, Target, Globe, Zap, Heart, Shield, Star, Award, Mic, Video, Gamepad2 } from 'lucide-react'
 import Image from 'next/image'
-import { getApkUrl } from '@/lib/apk-url'
 
 const FeaturesSection = () => {
-  const apkUrl = getApkUrl()
-  
   const mainFeatures = [
     {
       icon: MessageCircle,
@@ -321,11 +318,11 @@ const FeaturesSection = () => {
             </h3>
             <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
               Join thousands of learners who have already improved their English with Aarambh. 
-              <a href={apkUrl} download={apkUrl.startsWith('http') ? undefined : 'aarambh-app.apk'} className="underline hover:opacity-80 transition-opacity">Download</a> the app today and take the first step towards your goals.
+              <a href="/app.apk" download="aarambh-app.apk" className="underline hover:opacity-80 transition-opacity">Download</a> the app today and take the first step towards your goals.
             </p>
             <motion.a
-              href={apkUrl}
-              download={apkUrl.startsWith('http') ? undefined : 'aarambh-app.apk'}
+              href="/app.apk"
+              download="aarambh-app.apk"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-red-500 px-10 py-5 rounded-full font-semibold text-xl hover:shadow-2xl transition-all duration-200 inline-block"

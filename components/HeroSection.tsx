@@ -3,11 +3,8 @@
 import { motion } from 'framer-motion'
 import { Download, Play, Star, Users, Award, MessageCircle, Phone } from 'lucide-react'
 import Image from 'next/image'
-import { getApkUrl } from '@/lib/apk-url'
 
 const HeroSection = () => {
-  const apkUrl = getApkUrl()
-  
   return (
     <section id="home" className="min-h-screen flex items-center justify-center gradient-bg-hero relative overflow-x-hidden">
       {/* Background Elements */}
@@ -74,8 +71,8 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start"
             >
               <motion.a
-                href={apkUrl}
-                download={apkUrl.startsWith('http') ? undefined : 'aarambh-app.apk'}
+                href="/app.apk"
+                download="aarambh-app.apk"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary flex items-center justify-center space-x-3"

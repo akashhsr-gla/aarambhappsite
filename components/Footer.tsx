@@ -3,16 +3,14 @@
 import { motion } from 'framer-motion'
 import { Download, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react'
 import Image from 'next/image'
-import { getApkUrl } from '@/lib/apk-url'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-  const apkUrl = getApkUrl()
 
   const footerLinks = {
     product: [
       { name: 'Features', href: '#features' },
-      { name: 'Download', href: apkUrl, download: true },
+      { name: 'Download', href: '/app.apk', download: true },
       { name: 'Pricing', href: '#' },
       { name: 'Updates', href: '#' },
     ],
@@ -76,8 +74,8 @@ const Footer = () => {
                   Affordable, accessible, and effective learning for everyone.
                 </p>
                 <motion.a
-                  href={apkUrl}
-                  download={apkUrl.startsWith('http') ? undefined : 'aarambh-app.apk'}
+                  href="/app.apk"
+                  download="aarambh-app.apk"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="btn-primary flex items-center space-x-2"
