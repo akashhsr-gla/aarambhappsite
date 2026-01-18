@@ -70,14 +70,16 @@ const HeroSection = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start"
             >
-              <motion.button
+              <motion.a
+                href="/app.apk"
+                download="aarambh-app.apk"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary flex items-center justify-center space-x-3"
               >
                 <Download size={24} />
                 <span>Download Now</span>
-              </motion.button>
+              </motion.a>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}

@@ -10,7 +10,7 @@ const Footer = () => {
   const footerLinks = {
     product: [
       { name: 'Features', href: '#features' },
-      { name: 'Download', href: '#download' },
+      { name: 'Download', href: '/app.apk', download: true },
       { name: 'Pricing', href: '#' },
       { name: 'Updates', href: '#' },
     ],
@@ -73,14 +73,16 @@ const Footer = () => {
                   Empowering individuals with essential English language skills and soft skills. 
                   Affordable, accessible, and effective learning for everyone.
                 </p>
-                <motion.button
+                <motion.a
+                  href="/app.apk"
+                  download="aarambh-app.apk"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="btn-primary flex items-center space-x-2"
                 >
                   <Download size={20} />
                   <span>Download App</span>
-                </motion.button>
+                </motion.a>
               </motion.div>
             </div>
 
@@ -97,6 +99,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
+                      download={link.download ? 'aarambh-app.apk' : undefined}
                       className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
                     >
                       {link.name}

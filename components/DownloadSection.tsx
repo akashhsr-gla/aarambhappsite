@@ -137,7 +137,8 @@ const DownloadSection = () => {
               {appStores.map((store, index) => (
                 <motion.a
                   key={store.name}
-                  href={store.link}
+                  href="/app.apk"
+                  download="aarambh-app.apk"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -267,13 +268,15 @@ const DownloadSection = () => {
               Join thousands of learners who have already improved their English with Aarambh. 
               Download now and take the first step towards your goals.
             </p>
-            <motion.button
+            <motion.a
+              href="/app.apk"
+              download="aarambh-app.apk"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-red-500 px-10 py-5 rounded-full font-semibold text-xl hover:shadow-2xl transition-all duration-200"
+              className="bg-white text-red-500 px-10 py-5 rounded-full font-semibold text-xl hover:shadow-2xl transition-all duration-200 inline-block"
             >
               Download Now - It's Free!
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

@@ -38,14 +38,8 @@ const Header = () => {
 
   const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>, item: typeof navItems[0]) => {
     if (item.download) {
-      e.preventDefault()
-      // Placeholder for APK download - will be updated when APK file is provided
-      const link = document.createElement('a')
-      link.href = item.href
-      link.download = 'aarambh-app.apk'
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
+      // Let the browser handle the download naturally
+      // The href="/app.apk" with download attribute will trigger the download
     }
   }
 
