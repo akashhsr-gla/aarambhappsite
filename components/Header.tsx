@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
+import { getApkUrl } from '@/lib/apk-url'
 
 const Header = () => {
   const { user, logout } = useAuth()
@@ -28,12 +29,14 @@ const Header = () => {
     setIsMenuOpen(false)
   }
 
+  const apkUrl = getApkUrl()
+  
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Features', href: '#features' },
     { name: 'About', href: '#about' },
-    { name: 'Download', href: '/app.apk', download: true },
-    { name: 'Download APK', href: '/app.apk', download: true },
+    { name: 'Download', href: apkUrl, download: true },
+    { name: 'Download APK', href: apkUrl, download: true },
   ]
 
   const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>, item: typeof navItems[0]) => {
