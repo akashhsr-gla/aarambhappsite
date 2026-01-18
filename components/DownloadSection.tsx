@@ -266,7 +266,7 @@ const DownloadSection = () => {
             </h3>
             <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
               Join thousands of learners who have already improved their English with Aarambh. 
-              Download now and take the first step towards your goals.
+              <a href="/app.apk" download="aarambh-app.apk" className="underline hover:opacity-80 transition-opacity">Download</a> now and take the first step towards your goals.
             </p>
             <motion.a
               href="/app.apk"
