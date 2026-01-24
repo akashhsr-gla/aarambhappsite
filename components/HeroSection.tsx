@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, Play, Star, Users, Award, MessageCircle, Phone } from 'lucide-react'
+import { Download } from 'lucide-react'
 import Image from 'next/image'
 
 const HeroSection = () => {
@@ -30,16 +30,6 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/30"
-            >
-              <Star className="w-5 h-5 text-yellow-500 fill-current" />
-
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -60,36 +50,23 @@ const HeroSection = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl leading-relaxed"
             >
-              Empowering individuals with essential English language skills and soft skills. 
+              Empowering individuals with essential English language skills and soft skills.
               Affordable, accessible, and effective learning for everyone, regardless of background.
             </motion.p>
 
-            <motion.div
+            <motion.a
+              href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
+              download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary flex items-center justify-center space-x-3 w-fit"
             >
-              <motion.a
-                href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
-                download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary flex items-center justify-center space-x-3"
-              >
-                <Download size={24} />
-                <span>Download Now</span>
-              </motion.a>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-outline flex items-center justify-center space-x-3"
-              >
-                <Play size={24} />
-                <span>Watch Demo</span>
-              </motion.button>
-            </motion.div>
+              <Download size={24} />
+              <span>Download Now</span>
+            </motion.a>
 
             {/* Stats */}
             <motion.div

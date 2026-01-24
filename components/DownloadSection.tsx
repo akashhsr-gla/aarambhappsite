@@ -7,26 +7,19 @@ import Image from 'next/image'
 const DownloadSection = () => {
   const appStores = [
     {
-      name: 'Google Play Store',
+      name: 'Download APK',
       icon: '📱',
-      link: '#',
+      link: 'https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk',
       rating: '4.8',
       color: 'from-green-500 to-green-600'
-    },
-    {
-      name: 'Apple App Store',
-      icon: '🍎',
-      link: '#',
-      rating: '4.9',
-      color: 'from-blue-500 to-blue-600'
     }
   ]
 
   const features = [
     {
       icon: Smartphone,
-      title: "Cross-Platform",
-      description: "Available on iOS and Android devices"
+      title: "Android App",
+      description: "Available for all Android devices"
     },
     {
       icon: Star,
@@ -69,8 +62,8 @@ const DownloadSection = () => {
             Download <span className="text-gradient">Aarambh</span> Today
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Start your English learning journey with our revolutionary app. 
-            Available on all major platforms with a seamless learning experience designed for everyone.
+            Start your English learning journey with our revolutionary Android app.
+            Download the APK and begin your path to English mastery today.
           </p>
         </motion.div>
 
@@ -265,7 +258,7 @@ const DownloadSection = () => {
               Ready to Transform Your English Skills?
             </h3>
             <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-              Join thousands of learners who have already improved their English with Aarambh. 
+              Join thousands of learners who have already improved their English with Aarambh.
               <a href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk" download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk" className="underline hover:opacity-80 transition-opacity">Download</a> now and take the first step towards your goals.
             </p>
             <motion.a

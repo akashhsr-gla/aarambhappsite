@@ -33,7 +33,6 @@ const Header = () => {
     { name: 'Features', href: '#features' },
     { name: 'About', href: '#about' },
     { name: 'Download', href: 'https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk', download: true },
-    { name: 'Download APK', href: 'https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk', download: true },
   ]
 
   const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>, item: typeof navItems[0]) => {

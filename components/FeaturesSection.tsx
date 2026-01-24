@@ -131,8 +131,8 @@ const FeaturesSection = () => {
             <span className="text-gradient">Effective Learning</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Aarambh combines cutting-edge technology with proven learning methodologies 
-            to provide you with the most effective English learning experience. 
+            Aarambh combines cutting-edge technology with proven learning methodologies
+            to provide you with the most effective English learning experience.
             Every feature is designed to make learning engaging, accessible, and results-driven.
           </p>
         </motion.div>
@@ -156,7 +156,7 @@ const FeaturesSection = () => {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-4 text-gray-800">{feature.title}</h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
-                    
+
                     {/* Feature Details */}
                     <div className="space-y-3 mb-6">
                       {feature.details.map((detail, idx) => (
@@ -304,33 +304,7 @@ const FeaturesSection = () => {
           </motion.div>
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-red-500 to-blue-500 rounded-3xl p-12 text-white">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your English Skills?
-            </h3>
-            <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-              Join thousands of learners who have already improved their English with Aarambh. 
-              <a href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk" download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk" className="underline hover:opacity-80 transition-opacity">Download</a> the app today and take the first step towards your goals.
-            </p>
-            <motion.a
-              href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
-              download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-red-500 px-10 py-5 rounded-full font-semibold text-xl hover:shadow-2xl transition-all duration-200 inline-block"
-            >
-              Start Learning Today
-            </motion.a>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )
