@@ -318,11 +318,11 @@ const FeaturesSection = () => {
             </h3>
             <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
               Join thousands of learners who have already improved their English with Aarambh. 
-              <a href="/app.apk" download="aarambh-app.apk" className="underline hover:opacity-80 transition-opacity">Download</a> the app today and take the first step towards your goals.
+              <a href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk" download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk" className="underline hover:opacity-80 transition-opacity">Download</a> the app today and take the first step towards your goals.
             </p>
             <motion.a
-              href="/app.apk"
-              download="aarambh-app.apk"
+              href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
+              download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-red-500 px-10 py-5 rounded-full font-semibold text-xl hover:shadow-2xl transition-all duration-200 inline-block"

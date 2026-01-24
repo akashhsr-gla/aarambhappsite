@@ -10,7 +10,7 @@ const Footer = () => {
   const footerLinks = {
     product: [
       { name: 'Features', href: '#features' },
-      { name: 'Download', href: '/app.apk', download: true },
+      { name: 'Download', href: 'https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk', download: true },
       { name: 'Pricing', href: '#' },
       { name: 'Updates', href: '#' },
     ],
@@ -74,8 +74,8 @@ const Footer = () => {
                   Affordable, accessible, and effective learning for everyone.
                 </p>
                 <motion.a
-                  href="/app.apk"
-                  download="aarambh-app.apk"
+                  href="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
+                  download="https://github.com/akashhsr-gla/aarambhappsite/releases/download/v1.0.4/application-a38f2cad-0579-4c14-8f81-e4ce7fdeb0d3.apk"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="btn-primary flex items-center space-x-2"
