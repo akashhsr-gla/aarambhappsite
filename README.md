@@ -61,7 +61,7 @@ npm install
 
 3. Create a `.env.local` file in the root directory with the following variables:
 ```env
-NEXT_PUBLIC_API_BASE_URL=https://aarambh-english-learning-app-1.onrender.com/api
+NEXT_PUBLIC_API_BASE_URL=https://aarambh-english-learning-app-64xw.onrender.com/api
 NEXT_PUBLIC_RAZORPAY_KEY_ID=rzp_test_your_key_here
 ```
 

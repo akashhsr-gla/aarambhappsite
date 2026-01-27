@@ -1,5 +1,5 @@
 // API service for website
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://aarambh-english-learning-app-1.onrender.com/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://aarambh-english-learning-app-64xw.onrender.com/api';
 
 // Helper function to get stored token
 const getStoredToken = (): string | null => {
